@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Truck Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="overlay"></div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+
+<h2>Menu</h2>
+
+<a href="#" onclick="showDashboard()">Dashboard</a>
+<a href="#" onclick="showTrips()">Previous Trips</a>
+<a href="#" onclick="openForm()">Add Trip</a>
+
+</div>
+
+<!-- Main -->
+<div class="main">
+
+<header>
+
+<span class="menu" onclick="toggleMenu()">☰</span>
+<h1>Truck Management System</h1>
+
+</header>
+
+<!-- Dashboard -->
+
+<div id="dashboard">
+
+<div class="card">
+<h2>Dashboard</h2>
+<p>Welcome to Truck Management System</p>
+</div>
+
+</div>
+
+<!-- Trips Section -->
+
+<div id="tripSection" style="display:none">
+
+<div class="card">
+
+<h2>Previous Trips</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Truck</th>
+<th>Driver</th>
+<th>Route</th>
+<th>Distance</th>
+<th>Total Fare</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="tripTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Add Trip Modal -->
+
+<div id="tripForm" class="modal">
+
+<div class="modal-content">
+
+<h2>Add Trip</h2>
+
+<input id="truck_number" placeholder="Truck Number">
+<input id="driver_name" placeholder="Driver Name">
+<input id="from_city" placeholder="From City">
+<input id="to_city" placeholder="To City">
+<input id="distance" type="number" placeholder="Distance">
+<input id="rate_per_km" type="number" placeholder="Rate per KM">
+<input id="toll" type="number" placeholder="Toll">
+<input id="loading_charge" type="number" placeholder="Loading Charge">
+<input id="trip_date" type="date">
+
+<button onclick="addTrip()">Save Trip</button>
+<button onclick="closeForm()" class="cancel">Cancel</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
